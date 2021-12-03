@@ -13,11 +13,11 @@ const Route = ({path, children}) => {
 			window.removeEventListener('popstate', onLocationChange);
 		}
 	},[]);
-	return window.location.pathname === path ? children : null ;
+	// return window.location.pathname === path ? children : null ;
 	// these line also same as above we can use eithr currentPath
 	// or window.location.pathname both are same now because its
 	// updated using stateSystem
-	// return currentPath === path ? children : null ;
+	return currentPath === path ? children : null ;
 	
 }
 export default Route;
